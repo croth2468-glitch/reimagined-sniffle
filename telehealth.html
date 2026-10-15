@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Real Health Tide — GLP-1 Care, Prescribed by Clinicians</title>
+<meta name="description" content="Check if an FDA-approved GLP-1 medicine like Wegovy or Zepbound is right for you. A licensed clinician reviews your history and prescribes only if appropriate.">
+<style>
+  :root { --bg:#fbfcfc; --text:#17201f; --muted:#55625f; --rule:#d6dddc; --accent:#0b5c75; --soft:#eef3f3; --on:#fff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0f1514; --text:#e6ecea; --muted:#9aa8a5; --rule:#29322f; --accent:#6cc3de; --soft:#161e1c; --on:#06161c; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+  header { border-bottom:1px solid var(--rule); padding:16px 0; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; font-size:13px; }
+  header span { color: var(--accent); }
+  .hero { padding: 64px 0 48px; }
+  h1 { font-size: clamp(32px,6vw,50px); line-height:1.12; margin:0 0 16px; max-width: 700px; }
+  .lead { color:var(--muted); font-size:19px; max-width:620px; }
+  .btn { display:inline-block; margin-top:24px; padding:14px 26px; background:var(--accent); color:var(--on); font-weight:600; text-decoration:none; border-radius:8px; }
+  section { padding: 44px 0; border-top: 1px solid var(--rule); }
+  h2 { font-size:26px; margin:0 0 20px; }
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+  .steps div { background:var(--soft); padding:20px; border-radius:8px; }
+  .steps b { display:block; margin-bottom:6px; }
+  .steps p { margin:0; color:var(--muted); font-size:15px; }
+  ul { padding-left:20px; } li { margin-bottom:8px; }
+  form { display:grid; gap:14px; max-width:460px; }
+  label { font-weight:600; font-size:15px; }
+  input, select { width:100%; padding:12px; font:inherit; color:var(--text); background:var(--bg); border:1px solid var(--rule); border-radius:8px; }
+  button { padding:14px; font:inherit; font-weight:600; background:var(--accent); color:var(--on); border:0; border-radius:8px; cursor:pointer; }
+  .note { font-size:14px; color:var(--muted); }
+  footer { border-top:1px solid var(--rule); padding:28px 0 56px; color:var(--muted); font-size:13px; line-height:1.6; }
+</style>
+</head>
+<body>
+<header><div class="wrap">Real Health <span>Tide</span></div></header>
+
+<main>
+  <div class="wrap hero">
+    <h1>GLP-1 care, led by a licensed clinician.</h1>
+    <p class="lead">Find out if an FDA-approved medicine such as Wegovy or Zepbound is right for you. A clinician reviews your history and prescribes only if it is appropriate and safe.</p>
+    <a class="btn" href="#start">Check eligibility</a>
+  </div>
+
+  <section><div class="wrap">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div><b>1. Tell us about you</b><p>A short health questionnaire: height, weight, conditions and current medicines.</p></div>
+      <div><b>2. Clinician review</b><p>A licensed provider in your state reviews your answers and may ask follow-up questions.</p></div>
+      <div><b>3. Prescription, if appropriate</b><p>If prescribed, an FDA-approved medicine is filled by a licensed U.S. pharmacy.</p></div>
+      <div><b>4. Ongoing follow-up</b><p>Check-ins to monitor side effects, progress and dose changes.</p></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2>What to know first</h2>
+    <ul>
+      <li>We offer FDA-approved medicines only. No research chemicals or unapproved peptides such as retatrutide.</li>
+      <li>A prescription is never guaranteed. Some people are not candidates, including those with a history of medullary thyroid carcinoma or MEN 2.</li>
+      <li>Common side effects are nausea, vomiting, diarrhea and constipation. Your clinician will explain the risks and warnings.</li>
+      <li>Cost, insurance coverage and pricing are shown after your clinician review.</li>
+    </ul>
+  </div></section>
+
+  <section id="start"><div class="wrap">
+    <h2>Check eligibility</h2>
+    <form id="f">
+      <div><label for="n">First name</label><input id="n" required></div>
+      <div><label for="e">Email</label><input id="e" type="email" required></div>
+      <div><label for="s">State</label><select id="s" required><option value="">Select a state</option><option>Texas</option><option>California</option><option>Florida</option><option>New York</option><option>Other</option></select></div>
+      <button type="submit">Start my review</button>
+      <p class="note" id="msg" aria-live="polite">Submitting starts a review only. It does not order a medication.</p>
+    </form>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <p><strong>Placeholder business page.</strong> Before launch, name your licensed medical group, supervising physicians and pharmacy partner, and add your privacy policy, terms and telehealth consents. Prescription drugs may be dispensed only on a valid prescription from a licensed prescriber. Do not market compounded or unapproved products as FDA-approved. Results vary and this is not medical advice.</p>
+  <p>&copy; 2026 Real Health Tide</p>
+</div></footer>
+
+<script>
+  document.getElementById('f').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('msg').textContent = 'Demo only: connect this form to your intake provider before launch.';
+  });
+</script>
+</body>
+</html>
